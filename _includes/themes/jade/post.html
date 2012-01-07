@@ -1,0 +1,10 @@
+<div class="date">{{ page.date | date_to_long_string }}</div>
+
+<ul class="tag_box inline">
+{% assign tags_list = page.tags %}
+{% include helpers/tags_list.html %}
+</ul>
+
+{{ content }}
+
+

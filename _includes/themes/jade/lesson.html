@@ -1,0 +1,11 @@
+<h1 class="highlight">blah {{ page.title }}</h1>
+<div class="date">{{ page.date | date_to_long_string }}</div>
+
+<ul class="tag_box inline">
+	<li><strong>tags:</strong></li>
+	{% for tag in page.tags %}
+		<li><a href="">{{ tag }}</a></li>
+	{% endfor %}
+</ul>
+
+{{ content }}
