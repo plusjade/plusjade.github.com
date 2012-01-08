@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Hello from Jekyll-Bootstrap-Core
+title: Home
 header: This is Jekyll-Bootstrap
+group : navigation
 ---
 
 Read [Jekyll Quick Start](http://jekyllbootstrap.com/jekyll-quick-start.html)
