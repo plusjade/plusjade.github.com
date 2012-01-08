@@ -26,11 +26,11 @@
     <div class="topbar">
       <div class="fill">
         <div class="container">
-          <a class="brand" href="#">{{ site.title }}</a>
+          <a class="brand" href="/">{{ site.title }}</a>
           <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="/archive.html">Archive</a></li>
-            <li><a href="/pages.html">Pages</a></li>
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include helpers/pages_list.html %}
           </ul>
           
           <form action="" class="pull-right" style="display:none">
@@ -48,7 +48,7 @@
       <div class="content">
         
         <div class="page-header">
-          <h1>{{ page.title }} <small>Supporting text or tagline</small></h1>
+          <h1>{{ page.title }} {% if page.tagline %}<small>{{ page.tagline }}</small>{% endif %}</h1>
         </div>
         
         <div class="row">
@@ -59,25 +59,6 @@
           
           <div class="span4">
             
-            <h3>Navigation</h3>
-      			<ul>
-      				<li><a href="/" class="">home</a></li>
-      				<li><a href="/about.html">about</a></li>
-      				<li><a href="{{site.var.archive_path}}">explore</a></li>
-      			</ul>
-
-      			<h3><a href="{{ site.var.categories_path }}">Categories</a></h3>
-      			<ul class="tag_box">
-      			{% assign categories_list = site.categories %}
-      			{% include helpers/categories_list.html %}
-      			</ul>
-
-      			<h3><a href="{{ site.var.tags_path }}">Tags</a></h3>
-      			<ul class="tag_box">
-            {% assign tags_list = site.tags %}
-      			{% include helpers/tags_list.html %}
-      			</ul>
-      			
           </div>
         </div>
       </div>
@@ -86,30 +67,25 @@
         <p>&copy; {{ site.author.name }} 2012</p>
       </footer>
 
-      <div id="custom_sidebar">
-        
-        <h3>Navigation</h3>
-  			<ul>
-  				<li><a href="/" class="">home</a></li>
-  				<li><a href="/about.html">about</a></li>
-  				<li><a href="{{site.var.archive_path}}">explore</a></li>
-  			</ul>
-
-  			<h3><a href="{{ site.var.categories_path }}">Categories</a></h3>
-  			<ul class="tag_box">
-  			{% assign categories_list = site.categories %}
-  			{% include helpers/categories_list.html %}
-  			</ul>
-
-  			<h3><a href="{{ site.var.tags_path }}">Tags</a></h3>
-  			<ul class="tag_box">
-        {% assign tags_list = site.tags %}
-  			{% include helpers/tags_list.html %}
-  			</ul>
-  			
-      </div>
-      
     </div> <!-- /container -->
 
+    <div id="custom_sidebar">
+      
+      <img src="https://secure.gravatar.com/avatar/b835c3656fab4a9241d6b7f983d6fce3?s=140" alt="self" id="me">
+      
+      <h5>Jade Dominguez</h5>
+      <p>
+        Hello! I'm a 26 year old self-learned software developer with no post-secondary education
+        from SoCal-USA. All my projects current and future will be <strong>Open and Free</strong>.
+  		</p>
+  		<h5>Purpose</h5>
+  		<p>
+  			The purpose of this website is to share code, knowldedge, and happiness.
+  			Credit to Derek Siver's who wrote an excellent post on the benefits of <a href="http://sivers.org/sharing">sharing</a>.
+  		</p>
+  		<h5>Contact</h5>
+  		{% include contact.html %}
+    </div>
+    
   </body>
 </html>
