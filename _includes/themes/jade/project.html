@@ -1,0 +1,30 @@
+<div class="page-header">
+  <h1>Project: {{ page.title }}</h1>
+</div>
+
+<div class="row">
+  <div class="span14">
+   
+    <ul class="media-grid">
+      {% for node in site.pages %}{% if node.group == "projects" %}
+        {% if page.url == node.url %}
+        <li class="active"><a href="{{node.url}}" class="active">
+          <img class="thumbnail" src="http://placehold.it/120x100" alt="">
+          {{node.title}}
+        </a></li>
+        {% else %}
+        <li><a href="{{node.url}}">
+          <img class="thumbnail" src="http://placehold.it/120x100" alt="">
+          {{node.title}}
+        </a></li>
+        {% endif %}
+      {% endif %}{% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span10">
+    {{ content }}
+  </div>
+</div>
