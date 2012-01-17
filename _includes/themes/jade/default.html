@@ -5,7 +5,7 @@
     <title>Bootstrap, from Twitter</title>
     <meta name="description" content="">
     <meta name="author" content="">
-
+    
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,7 +22,6 @@
   </head>
 
   <body>
-
     <div class="topbar">
       <div class="fill">
         <div class="container">
@@ -32,13 +31,6 @@
             {% assign group = 'navigation' %}
             {% include helpers/pages_list.html %}
           </ul>
-          
-          <form action="" class="pull-right" style="display:none">
-            <input class="input-small" type="text" placeholder="Username">
-            <input class="input-small" type="password" placeholder="Password">
-            <button class="btn" type="submit">Sign in</button>
-          </form>
-
         </div>
       </div>
     </div>
@@ -46,21 +38,7 @@
     <div class="container">
 
       <div class="content">
-        
-        <div class="page-header">
-          <h1>{{ page.title }} {% if page.tagline %}<small>{{ page.tagline }}</small>{% endif %}</h1>
-        </div>
-        
-        <div class="row">
-          
-          <div class="span10">
-            {{content}}
-          </div>
-          
-          <div class="span4">
-            
-          </div>
-        </div>
+        {{ content }}
       </div>
 
       <footer>
@@ -69,23 +47,6 @@
 
     </div> <!-- /container -->
 
-    <div id="custom_sidebar">
-      
-      <img src="https://secure.gravatar.com/avatar/b835c3656fab4a9241d6b7f983d6fce3?s=140" alt="self" id="me">
-      
-      <h5>Jade Dominguez</h5>
-      <p>
-        Hello! I'm a 26 year old self-learned software developer with no post-secondary education
-        from SoCal-USA. All my projects current and future will be <strong>Open and Free</strong>.
-  		</p>
-  		<h5>Purpose</h5>
-  		<p>
-  			The purpose of this website is to share code, knowldedge, and happiness.
-  			Credit to Derek Siver's who wrote an excellent post on the benefits of <a href="http://sivers.org/sharing">sharing</a>.
-  		</p>
-  		<h5>Contact</h5>
-  		{% include contact.html %}
-    </div>
-    
+    {% include sidebar.html %}
   </body>
 </html>
