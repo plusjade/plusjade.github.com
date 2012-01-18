@@ -17,3 +17,6 @@ author :
   github : plusjade
   twitter : plusjade
 
+javascripts :
+  enabled : true
+  baseUrl : "/assets/javascripts/require-js"
