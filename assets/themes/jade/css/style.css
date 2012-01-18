@@ -15,6 +15,7 @@
 	padding:2px;
 	border:1px solid #ccc;
 }
+
 /* Override some defaults */
 html, body {
   background-color: #eee;
@@ -30,7 +31,7 @@ body {
 }
 
 /* The white background content wrapper */
-.content {
+.container > .content {
   background-color: #fff;
   padding: 20px;
   margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
@@ -49,12 +50,6 @@ body {
   margin: -20px -20px 20px;
 }
 
-/* Give a quick and non-cross-browser friendly divider */
-.content .span4 {
-  margin-left: 0;
-  padding-left: 19px;
-  border-left: 1px solid #eee;
-}
 
 .topbar .btn {
   border: 0;
@@ -136,3 +131,71 @@ body {
 #archive_list li span{
 	float:right;
 }
+
+.media-grid {
+	text-align:center;
+}
+.media-grid li {
+	text-align:center;
+	display:inline-block;
+}	
+
+td.tag-group {
+	width:120px;
+	color:#333;
+	font-weight:bold;
+	text-transform:capitalize;
+	vertical-align:middle;
+}
+
+table.project-tags td {
+	border:0;
+}
+table.project-tags ul {
+	list-style:none;
+	margin:0;
+	padding:5px 0 ;
+	overflow:hidden;
+}
+table.project-tags ul li {
+	line-height:28px;
+	float:left;
+}
+table.project-tags ul a {
+	padding: 3px 6px;
+	margin: 2px;
+	background: #6A5E72;
+	color:#FFF;
+	border-radius: 3px;
+	text-decoration:none;
+	font-family:verdana;
+}
+table.project-tags ul a:hover {
+ background:#341931
+}
+
+
+#test strong {
+	color:#333;
+}
+#test ul {
+	display:block;
+	padding:4px 0;
+	list-style:none;
+	margin:1px;
+}
+#test ul li {
+	display:inline-block;
+	margin:0 3px;
+	padding:0 2px;
+	line-height:26px;
+	word-wrap; normal;
+}
+#test a span {
+	color:#999;
+	font-size:0.9em;
+}
+#test a:hover {
+	background:#FFFFCC;
+}
+
