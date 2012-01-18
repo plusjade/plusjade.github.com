@@ -2,6 +2,7 @@
 layout: project
 title: Jekyll Bootstrap
 group: projects
+tabify : h2
 project :
   name : jekyllbootstrap.com
   tagline : "Jekyll Bootstrap is the quickest way to start and publish your Jekyll powered blog. It's 100% compatible with GitHub pages."

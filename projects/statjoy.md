@@ -2,6 +2,7 @@
 layout: project
 title: statjoy.com
 group: projects
+tabify : h2
 project :
   name : statjoy.com
   tags :

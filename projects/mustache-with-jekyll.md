@@ -2,6 +2,7 @@
 layout: project
 title: Mustache-with-Jekyll
 group: projects
+tabify : h2
 project :
   name : mustache-with-jekyll
   tags :

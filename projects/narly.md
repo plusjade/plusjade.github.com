@@ -2,6 +2,7 @@
 layout: project
 title: narly.us
 group: projects
+tabify : h2
 project :
   name : narly.us
   tagline : "Narly is a (redis-based) tagging system for GitHub projects."

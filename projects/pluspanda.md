@@ -2,6 +2,7 @@
 layout: project
 title: pluspanda.com
 group: projects
+tabify : h2
 project :
   name : pluspanda.com
   tags :
