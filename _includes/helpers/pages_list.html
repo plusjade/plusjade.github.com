@@ -22,13 +22,24 @@ Usage:
 
 {% for node in pages_list %}
   {% if group == null or group == node.group %}
-  
+
+    {% capture node_url %}
+      {% capture node_filename %}{{ node.url | split:"/" | last }}{% endcapture %}
+      {% if node_filename == "index.html" %}
+        {{ node.url | remove_first:"index.html" }}
+      {% else %}
+        {{ node.url }}
+      {% endif %}
+    {% endcapture %}
+    
   	{% if page.url == node.url %}
-  	<li class="active"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
+  	<li class="active"><a href="{{node_url | strip_newlines | remove:" " }}" class="active">{{ node.title }}</a></li>
   	{% else %}
-  	<li><a href="{{node.url}}">{{node.title}}</a></li>
+  	<li><a href="{{node_url | strip_newlines | remove:" " }}">{{ node.title }}</a></li>
   	{% endif %}
- 
+    
+    {% assign node_url = null %}
+    {% assign node_filename = null %}
   {% endif %}
 {% endfor %}
 
