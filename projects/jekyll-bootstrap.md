@@ -4,18 +4,47 @@ title: Jekyll Bootstrap
 group: projects
 project :
   name : jekyllbootstrap.com
-  tags :
-    languages : [ruby, HTML, CSS, javascript]
-    frameworks : [jquery, twitter-bootstrap, jekyll]
-    infrastructure : [github-pages]
-    templating : [liquid]
-    platforms : [web]
+  tagline : "Jekyll Bootstrap is the quickest way to start and publish your Jekyll powered blog. It's 100% compatible with GitHub pages."
+  source : http://github.com/plusjade/jekyll-bootstrap
+  website : http://jekyllbootstrap.com
+  tagGroups :
+    -
+      name : platforms
+      tags : [{name : web, why : "Jekyll bootstrap runs in the web-browser with plans to add mobile browser support."}]
+    -
+      name : languages
+      tags :
+        -
+          {name : ruby, why : "Jekyll is implemented in ruby and I am most proficient in ruby." }
+        - 
+          {name : HTML, why : "HTML is needed for the website."}
+        -
+          {name : CSS, why : "CSS is needed for the website."}
+        - 
+          {name : javascript, why : "Since GitHub Pages does not run any custom ruby plugins I'm taking advantage of client-side programming to accomplish more advanced features."}
+    -
+      name : frameworks
+      tags :
+        -
+          {name : jquery, why : "jQuery is the defacto way to interact easily with the DOM."}
+        - 
+          {name : twitter-bootstrap, why : "I chose twitter bootstrap as a way to standardize and speed up design iteration."}
+        -
+          {name : jekyll, why : "Jekyll was chosen because the static-blog movement really aligns with putting 'publishing' ahead of everything. No server infrastructure or database requirements means the fastest path to publishing." }
+    -    
+      name : infrastructure
+      tags : [{name : github-pages, why : "Deploying to GitHub pages is beautiful in terms of speed and workflow. As a git/github user deploying cannot possibly be faster."}]
+    -
+      name : templating
+      tags : 
+        - 
+          {name : "liquid", why : "To keep compatibility with GitHub Pages I needed to make extensive use of Liquid. All helpers are essentially packaged liquid code made available to the user."}
+        -
+          {name : "mustache", why : "On the client side mustache is used to easily provide HTML templating to data-objects." }
+
 ---
 
 ## Overview
-
-Jekyll Bootstrap is the quickest way to start and publish your Jekyll powered blog.
-It's meant to be 100% compatible with GitHub pages. The project has two main components:
 
 ### Jekyll-Bootstrap Framework
 
@@ -34,7 +63,7 @@ Comprehensive documentation is provided separately at <http://jekyllbootstrap.co
 
 The project originally started _from_ the documentation. That is to say I had just intended
 to write blog posts about how I customized my jekyll blog. After much writing and organizing I realized
-it would be helpful to create a framework that outlined and adopted my strategies.
+it would be helpful to create a framework that outlined and adopted my strategies. This blog is running on Jekyll-Bootstrap!
 
 
 
@@ -80,7 +109,7 @@ Jekyll-Bootstrap is for you my beloved humans! &lt;3
 I don't want to get all teary-eyed here but learning that my work is and always will be
 _for the people_ is something I've only recently truly understood. Code doesn't matter, tools don't matter,
 that clever-plugin-that's-so-clever-nobody-can-use doesn't matter. Ultimately only people matter.
-Jekyll-Bootstrap is arguably the most impactful project I've made. It's also the one that contains the least amount of programming.
+Jekyll-Bootstrap is arguably the most impactful project I've made. It's also the one that contains the least amount of code.
 
 ### Teaching is Ridiculously Hard
 
@@ -97,15 +126,3 @@ that has an existing user-base. It was so trivial for me to add my link to the J
 Of course you can't spam your way into a market. Jekyll-Bootstrap took many days to build and addresses a genuine pain point.
 
 If only I could go around solving pain points all day and give them away for free ... hmmm!
-
-
-## Stack
-
-{% for tagGroup in page.project.tags %}
-  <h5>{{ tagGroup[0] }}</h5>
-  <ul>
-  {% for tag in tagGroup[1] %}
-    <li>{{ tag }}</li>
-  {% endfor %}
-  </ul>
-{% endfor %}

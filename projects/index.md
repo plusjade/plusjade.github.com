@@ -5,5 +5,6 @@ header: Projects
 group: navigation
 ---
 
-These are my projects. All of my projects are Open Source.
+These are my most significant projects.
+All of my projects are Open Source.
 
